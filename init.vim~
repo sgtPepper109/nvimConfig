@@ -1,0 +1,4 @@
+set number
+
+call plug#begin('C:/Users/arsha/AppData/Local/nvim/plugged')
+call plug#end()
