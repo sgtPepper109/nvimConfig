@@ -63,7 +63,7 @@ nnoremap <silent>]b :BufferLineCyclePrev<CR>
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 "let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
+let g:airline_theme='distinguished'
 
 "nnoremap <leader>n :NERDTreeFocus<CR>
 "nnoremap <C-\><C-\> :NERDTreeToggle<CR>
