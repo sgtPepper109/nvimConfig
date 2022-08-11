@@ -13,9 +13,9 @@
   --}
 --}
 
-require("nvim-tree").setup {
-  open_on_setup = true,
-}
+--require("nvim-tree").setup {
+  --open_on_setup = true,
+--}
 
 require('bufferline').setup {
   options = {
@@ -46,5 +46,6 @@ require('bufferline').setup {
   }
 }
 
-require("startup").setup({theme = "startify"})
+--require("startup").setup({theme = "startify"})
 require('pretty-fold').setup()
+--require('feline').setup()

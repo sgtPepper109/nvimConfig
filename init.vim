@@ -1,20 +1,21 @@
 call plug#begin('C:/Users/arsha/AppData/Local/nvim/plugged')
 
+"Plug 'feline-nvim/feline.nvim'
 Plug 'p00f/cphelper.nvim'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 "Plug 'kdheepak/tabline.nvim'
-Plug 'nvim-lualine/lualine.nvim'
+"Plug 'nvim-lualine/lualine.nvim'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"Plug 'preservim/nerdtree'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'scrooloose/nerdtree-project-plugin'
-"Plug 'PhilRunninger/nerdtree-buffer-ops'
-"Plug 'PhilRunninger/nerdtree-visual-selection'
+Plug 'PhilRunninger/nerdtree-buffer-ops'
+Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'preservim/tagbar'
 Plug 'ervandew/supertab'
 Plug 'psilwka/vim-smoothie'
@@ -25,13 +26,13 @@ Plug 'mileszs/ack.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/nerdcommenter'
 Plug 'crusoexia/vim-monokai'
-"Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'kshenoy/vim-signature'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kyazdani42/nvim-tree.lua'
+"Plug 'kyazdani42/nvim-tree.lua'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -40,7 +41,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jacoborus/tender.vim'
 Plug 'sjl/badwolf'
 Plug 'kyoz/purify'
-Plug 'startup-nvim/startup.nvim'
+"Plug 'startup-nvim/startup.nvim'
 Plug 'anuvyklack/pretty-fold.nvim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'akinsho/toggleterm.nvim', { 'tag' : 'v2.*' }
@@ -65,9 +66,9 @@ nnoremap <silent>]b :BufferLineCyclePrev<CR>
 let g:airline_powerline_fonts = 1
 let g:airline_theme='distinguished'
 
-"nnoremap <leader>n :NERDTreeFocus<CR>
-"nnoremap <C-\><C-\> :NERDTreeToggle<CR>
-nnoremap <C-\><C-\> :NvimTreeToggle<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-\><C-\> :NERDTreeToggle<CR>
+"nnoremap <C-\><C-\> :NvimTreeToggle<CR>
 
 nnoremap <C-a> :ALEToggle<CR>
 nmap <F8> :TagbarToggle<CR>
@@ -130,9 +131,16 @@ highlight CocUnusedHighlight ctermbg=NONE guibg=#000000
 "autocmd VimEnter *
             "\   if !argc()
             "\ |   Startify
-            ""\ |   NvimTreeToggle
+            "\ |   NERDTree
             "\ |   wincmd w
             "\ | endif
+
+autocmd VimEnter *
+            \   if !argc()
+            \ |   Startify
+            \ |   NERDTree
+            \ |   wincmd w
+            \ | endif
 
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = ''
@@ -140,8 +148,9 @@ let g:ale_sign_warning = '💡'
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
-"let g:NERDTreeDirArrowExpandable = '▶'
-"let g:NERDTreeDirArrowCollapsible = '▼'
+
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
 
 lua require('toggleterm').setup({ open_mapping = [[<c-\>]], direction="float", shell=vim.o.shell,})
 
@@ -153,5 +162,4 @@ autocmd TermEnter term://*toggleterm#*
 " For example: 2<C-t> will open terminal 2
 nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
-
 
