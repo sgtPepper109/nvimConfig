@@ -1,6 +1,7 @@
 call plug#begin('C:/Users/arsha/AppData/Local/nvim/plugged')
 
 "Plug 'feline-nvim/feline.nvim'
+Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'p00f/cphelper.nvim'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 "Plug 'kdheepak/tabline.nvim'
@@ -163,3 +164,11 @@ autocmd TermEnter term://*toggleterm#*
 nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
 
+au VimLeave * set guicursor=a:hor10-blinkon1
+
+augroup ScrollbarInit
+  autocmd!
+  autocmd WinScrolled,VimResized,QuitPre * silent! lua require('scrollbar').show()
+  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+  autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
+augroup end
