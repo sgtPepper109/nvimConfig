@@ -93,7 +93,7 @@ set shiftwidth=2
 set expandtab
 set smarttab
 set autoindent
-set foldmethod=manualA
+set foldmethod=manual
 set autoindent
 set smartindent
 
