@@ -87,12 +87,15 @@ autocmd ColorScheme * call TransparentBackground()
 
 filetype plugin indent on
 set number
+set relativenumber
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set smarttab
 set autoindent
-set foldmethod=manual
+set foldmethod=manualA
+set autoindent
+set smartindent
 
 highlight Normal guibg=none
 highlight NonText guibg=none
