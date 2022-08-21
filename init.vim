@@ -146,7 +146,7 @@ autocmd VimEnter *
             \ |   wincmd w
             \ | endif
 
-let g:ale_sign_error = '✘'
+let g:ale_sign_error = '❗'
 let g:ale_sign_warning = ''
 let g:ale_sign_warning = '💡'
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
