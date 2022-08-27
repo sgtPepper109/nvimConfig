@@ -1,1 +1,1 @@
-sgtPepper's Neovim Configuration for Windows
+mephistopheles6's Neovim Configuration for Windows
