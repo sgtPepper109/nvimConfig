@@ -167,8 +167,6 @@ autocmd TermEnter term://*toggleterm#*
 nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
 
-au VimLeave * set guicursor=a:hor10-blinkon1
-
 augroup ScrollbarInit
   autocmd!
   autocmd WinScrolled,VimResized,QuitPre * silent! lua require('scrollbar').show()
