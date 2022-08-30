@@ -81,21 +81,21 @@ syntax enable
 
 lua require('ayu').colorscheme()
 lua require('ayu').setup({ mirage = false, overrides = {}, })
-colorscheme ayu-mirage
+colorscheme gruvbox
 
 autocmd ColorScheme * call TransparentBackground()
 
 filetype plugin indent on
 set number
 set relativenumber
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
-set smarttab
-set autoindent
+"set smarttab
 set foldmethod=manual
 set autoindent
 set smartindent
+set cursorline
 
 highlight Normal guibg=none
 highlight NonText guibg=none
